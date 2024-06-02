@@ -1,0 +1,53 @@
+.logo-icon {
+    height: 50px;
+    width: 50px;
+    border: 1px solid;
+    background-image: url(https://picsum.photos/200);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+.section-container {
+    background-color: aqua;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav>section {
+    display: flex;
+    align-items: center;
+}
+.nav-item {
+    border: 1px solid;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 8px;
+    text-decoration:none;
+}
+
+.banner-container {
+    height: 378px;
+    border: 1px solid;
+}
+
+.facility-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.message-us-section {
+    display: flex;
+}
+
+.form-result {
+    height: 100%;
+    border: 1px solid black;
+}
+
+.result-container {
+    width: 100%;
+}
