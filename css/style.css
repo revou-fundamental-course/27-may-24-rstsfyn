@@ -378,3 +378,13 @@ footer {
   text-align: center;
   padding: 20px;
 }
+
+@media (max-width: 768px) {
+  body {
+    padding: 0 20px;
+  }
+
+  .carousel-item {
+    display: block;
+  }
+}
