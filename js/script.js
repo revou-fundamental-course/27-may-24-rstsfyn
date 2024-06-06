@@ -94,3 +94,13 @@ document.addEventListener('DOMContentLoaded', function() {
     showPopup();
   });
   
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navSection = document.querySelector('nav > section');
+  
+    menuToggle.addEventListener('click', function() {
+      navSection.classList.toggle('active');
+    });
+  });
+  

@@ -52,6 +52,68 @@ nav > section {
   color: #fff;
 }
 
+.menu-toggle {
+  display: none; 
+  cursor: pointer;
+  margin-left: auto; 
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; 
+  }
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--text);
+  margin: 5px 0;
+  transition: transform 0.4s, opacity 0.4s;
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  nav > section {
+    display: none;
+    flex-direction: column;
+    background-color: var(--background);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1000;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  nav > section.active {
+    display: flex; /* Ubah display ke flex saat aktif */
+    transform: translateY(0);
+  }
+
+  .nav-item {
+    text-align: center;
+    margin: 10px 0;
+  }
+}
+
+
 /*CSS Home*/
 #home header h1 {
   font-size: 20px;
@@ -386,5 +448,25 @@ footer {
 
   .carousel-item {
     display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-group {
+    display: grid;
+    gap: 10px;
+  }
+
+  .radio-group {
+    flex-direction: column;
+  }
+
+  .form-group button[type="submit"] {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+
+  .result-container {
+    padding: 10px;
   }
 }
