@@ -1,95 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portofolio restu</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+    <!--Menambahkan font Poppins-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" />
+  </head>
+  <body>
+    <!--Codingan Nav Bar-->
     <nav>
-        <div class="logo-icon"></div>
-        <section>
-            <a class="nav-item" href="#home">Home</a>
-            <a class="nav-item" href="#facility">Our Facilites</a>
-            <a class="nav-item" href="">Achievments</a>
-            <a class="nav-item" href="#messageus">Message Us</a>
-        </section>
+      <div class="logo-icon"></div>
+      <section>
+        <a class="nav-item" href="#home">Home</a>
+        <a class="nav-item" href="#facility">Our Facilites</a>
+        <a class="nav-item" href="#messageus">Message Us</a>
+      </section>
     </nav>
-
-    <hr>
+    <hr />
 
     <section class="section-container">
-        <!--Home-->
-        <section id="home">
-            <header>
-                <h1>Hi My Name is Restu!</h1>
-
-                <article>
-                    <p>lorem itsum dolor sit amet...</p>
-                    
-                    <div class="banner-container">
-
-                    </div>
-                </article>
-            </header>
-        </section>
-        <hr>
-        <!--Our Facilities-->
-        <section id="facility">
-            <header>
-                <h1>Our Facilites</h1>
-            </header>
-
-            <article class="facility-list">
-                <div>
-                    <div style="width: 50px; height: 50px; border: 1px solid;"></div>
-                    <p>Free Ask</p>
+      <!-- Start Codingan Home-->
+      <section id="home">
+        <header>
+          <h1>Welcome <span id="welcomeMessage"></span>!</h1>
+          <h4>And this is my portofolio</h4>
+          <article>
+            <p>My Name is Restu, And I'm a amateur software developer. I have the basic programming in Mobile with Flutter. And i in side learn to Web Development and use programming language php and javascript, in php i like use laravel because many documentation to learn this framework and in javascript i like use react js and next js.</p>
+            <div class="banner-container">
+              <div class="carousel">
+                <div class="carousel-item active">
+                  <img src="assets/images/img_banner1.jpeg" alt="Slide 1">
                 </div>
-
-                <div>
-                    <div style="width: 50px; height: 50px; border: 1px solid;"></div>
-                    <p>Free Ask</p>
+                <div class="carousel-item">
+                  <img src="assets/images/img_banner2.jpeg" alt="Slide 2">
                 </div>
-
-                <div>
-                    <div style="width: 50px; height: 50px; border: 1px solid;"></div>
-                    <p>Free Ask</p>
+                <div class="carousel-item">
+                  <img src="assets/images/img_banner3.jpeg" alt="Slide 3">
                 </div>
-            </article>
-        </section>
+              </div>
+            </div>
+            </div>
+          </article>
+        </header>
+        <div class="welcome-form">
+          <button id="openPopupBtn">Set Welcome Message</button>
+        </div>
 
-        <hr>
+        <!-- Modal atau popup -->
+        <div class="popup-overlay" id="popupOverlay">
+          <div class="popup">
+            <form id="popupForm">
+              <label for="popupInput">Welcome!, Please enter your name! </label>
+              <input type="text" id="popupInput" name="popupInput" placeholder="Enter your name here!" required>
+              <button type="submit">Set Message</button>
+              <button type="button" id="closePopupBtn">Close</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!--Finish Codingan Home-->
+      <hr />
 
-        <!--Message US-->
-        <section id="messageus">
-            <header>
-                <h1>Message Us</h1>
-            </header>
+      <!--Our Facilities-->
+      <section id="facility">
+        <header>
+          <h1>Our Facilities</h1>
+        </header>
+      
+        <article class="facility-list">
+          <div>
+            <img src="assets/images/freekonsultasi.png" alt="Facility 1">
+            <p>Free Consultasi</p>
+          </div>
+      
+          <div>
+            <img src="assets/images/freerevisi.png" alt="Facility 2">
+            <p>Free Revisi</p>
+          </div>
+      
+          <div>
+            <img src="assets/images/negotiation.png" alt="Facility 3">
+            <p>Nego Sampai Jadi</p>
+          </div>
+        </article>
+      </section>
+      <!--Finish Facilites-->
+      <hr />
 
-            <section class="message-us-section">
-                <!--Form-->
-                <section>
-                    <form>
-                        <label for="">Name :</label>
-                        <input type="text">
-                        <label for=""></label>
-                    </form>
-                </section>
+      <!--Start Message US-->
+      <section id="messageus">
+        <header>
+          <h1>Message Us</h1>
+        </header>
+      
+        <div class="message-us-section">
+          <!-- Form -->
+          <section class="form-container">
+            <form id="messageForm">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+          
+              <div class="form-group">
+                <label for="birthdate">Birthdate:</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+              </div>
+          
+              <div class="form-group">
+                <label>Gender:</label>
+                <div class="radio-group">
+                  <div>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                  </div>
+                  <div>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">Female</label>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+              </div>
+          
+              <button type="submit">Send Message</button>
+            </form>
+          </section>
+          
+          <!-- Hasil -->
+          <section class="result-container">
+            <div class="form-result">
+              <h2 id="resultSuccess"></h2>
+              <p>Name: <span id="resultName"></span></p>
+              <p>Birthdate: <span id="resultBirthdate"></span></p>
+              <p>Gender: <span id="resultGender"></span></p>
+              <p>Message: <span id="resultMessage"></span></p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <hr />
+<!--Finish Message US-->
 
-                <!--Hasil-->
-                <section class="result-container">
-                    <div class="form-result">
-
-                    </div>
-                </section>
-            </section>
-        </section>
     </section>
-
+    <!--Start Footer-->
     <footer>
-
+      <div class="footer-container">
+        <div class="footer-info">
+          <p>&copy; 2024 Portofolio Restu. Made with ❤️</p>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/restusofyanmaarif" target="_blank" rel="noopener noreferrer">Linkedin</a>
+          <a href="https://www.youtube.com/channel/UCTjZZjvZzTMnlzncilS1EwQ" target="_blank" rel="noopener noreferrer">Youtube</a>
+          <a href="https://www.instagram.com/restusofyanm_" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+      </div>
     </footer>
+    <!--Finish Footer-->
 
-</body>
+    <script src="js/script.js"></script>
+  </body>
 </html>
